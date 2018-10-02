@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+          <h2 class="mt-3">Form Data Mahasiswa</h2>
+          <hr>
+          <label for="nim" class="">NIM</label> 
+          <input type="text" name="nim" id="nim" class="form-control" pattern="\d{1,7}" title="Masukkan 7 digit nim anda" [(ngModel)]="nim">
+          <br>
+          <label for="nama" class="">Nama</label> 
+          <input type="text" name="nama" id="nama" class="form-control" pattern="\s" [(ngModel)]="nama">
+          <br>
+          <label for="kelas" class="">kelas</label> 
+          <input type="text" name="kelas" id="kelas" class="form-control" [(ngModel)]="kelas">
+          <br>
+          <button class="btn btn-block btn-primary " (click)="tambahmhs()">Tambah Mahasiswa</button>
+          <br>
+      </div>
+    </div>
+    <div class="col-md-6">
+        <h2 class="mt-3">Data Mahasiswa</h2>
+        <hr>
+        <div class="card mb-3" *ngFor="let mhs of daftarmhs">
+            <h3 class="card-header">{{mhs.nama}}</h3>
+            <div class="card-body">
+              <h5 class="card-title">{{mhs.nim}}</h5>
+              <p class="card-text">{{mhs.kelas}}</p>
+             
+            </div>
+        </div>
+      
+  </div>
+</div>

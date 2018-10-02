@@ -1,0 +1,18 @@
+<button 
+  class="btn btn-primary" 
+  (click)="CreateText()">Tampilkan Detail</button>
+  <p  *ngIf="genap">
+  <!-- [ngStyle]="{'background-color' : i+2 > 5 ? 'blue' : 'white'}"
+  [ngClass]="{online: i+2 > 5 }" -->
+  {{textprint}} </p>
+
+  <ng-container *ngFor="let text of texts; let i=index" >
+      <p 
+  [ngStyle]="{'background-color' : i+2 > 5 ? 'blue' : 'white'}"
+  [ngClass]="{online: i+2 > 5 }">
+  {{text[1]}} </p>
+  
+  
+  </ng-container>
+
+ 
